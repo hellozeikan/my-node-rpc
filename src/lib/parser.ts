@@ -1,5 +1,6 @@
 const HEAD_LENGTH:number = 4;
-function parserBuffer(buffer:any) {
+parserBuffer.HEAD_LENGTH=HEAD_LENGTH;
+export function parserBuffer(buffer:any) {
     if(buffer.length <= HEAD_LENGTH) {
         return false;
     }
@@ -15,9 +16,3 @@ function parserBuffer(buffer:any) {
     buffer.consume(length);
     return pack;
 }
-
-parserBuffer.HEAD_LENGTH=HEAD_LENGTH;
-
-module.exports = parserBuffer;
-
-

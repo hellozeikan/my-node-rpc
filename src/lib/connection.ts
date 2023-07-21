@@ -2,6 +2,7 @@ import * as net from 'net';
 import {EventEmitter} from 'events';
 import * as BufferList from 'bl';
 import * as msgpack from '@msgpack/msgpack';
+import {parserBuffer} from './parser';
 export class Connection extends EventEmitter{
     _socket:net.Socket;
     _buffer:BufferList;
@@ -69,7 +70,7 @@ export class Connection extends EventEmitter{
         this._socket.end.apply(this._socket, args);
     }
 
-    write(msg:string) {
+    write(msg:any) {
         if (!this._connected) {
           throw new Error('please retry');
         }

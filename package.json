@@ -43,6 +43,7 @@
   ],
   "dependencies": {
     "@msgpack/msgpack": "^3.0.0-beta2",
-    "bl": "^6.0.3"
+    "bl": "^6.0.3",
+    "generic-pool": "^3.9.0"
   }
 }

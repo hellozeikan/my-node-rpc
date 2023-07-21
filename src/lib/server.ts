@@ -1,11 +1,11 @@
 
 import {EventEmitter} from 'events';
 import * as net from 'net'
-import {Connection} from './connect'
+import {Connection} from './connection'
 import {Request} from './request'
 import {Response} from './response'
 import * as util from 'util';
-export class MyServer extends EventEmitter{
+export class MyRpc extends EventEmitter{
     _offset?:number;
     _onservice?:boolean;
     _conns?:any;
